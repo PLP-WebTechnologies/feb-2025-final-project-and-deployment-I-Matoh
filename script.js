@@ -23,11 +23,11 @@ form.addEventListener('submit', (e) => {
 
   if (name === '' || email === '') {
     formMessage.textContent = 'Please fill in all fields.';
-    formMessage.style.color = 'red';
+    formMessage.style.color = 'red';  //
     return;
   }
 
-  // Simple email regex validation
+  // Simple regex validation on email
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     formMessage.textContent = 'Please enter a valid email address.';
